@@ -26,7 +26,7 @@ func init() {
 
 func main() {
 	flag.Parse()
-	outFile, _ := os.Create("handle-updates.txt")
+	outFile, _ := os.Create(fmt.Sprintf("https-handle-updates-%s.log", environment))
 	defer outFile.Close()
 	log.SetOutput(outFile)
 
